@@ -1,22 +1,27 @@
-<template> 
-  <div id="app"> 
-    <!-- Navbar sederhana — akan dipindah ke komponen AppHeader di Bab 3 --> 
-    <nav class="navbar"> 
-      <RouterLink to="/" class="brand">📚 SiPerpus</RouterLink> 
-      <div class="nav-links"> 
-        <RouterLink to="/" active-class="aktif" exact>Beranda</RouterLink> 
-        <RouterLink to="/katalog" active-class="aktif">Katalog</RouterLink> 
-        <!-- Link lain akan ditambahkan di Bab 4 --> 
-      </div> 
-    </nav> 
-  
-    <main> 
-      <RouterView /> 
-    </main> 
-  </div> 
-</template> 
-  
-/* Reset global */
+<template>
+  <div id="app">
+    <!-- Navbar -->
+    <nav class="navbar">
+      <RouterLink to="/" class="brand">📚 SiPerpus</RouterLink>
+
+      <div class="nav-links">
+        <RouterLink to="/" active-class="aktif">Beranda</RouterLink>
+        <RouterLink to="/katalog" active-class="aktif">Katalog</RouterLink>
+      </div>
+    </nav>
+
+    <main>
+      <RouterView />
+    </main>
+  </div>
+</template>
+
+<script setup>
+// tidak wajib isi kalau belum ada logic
+</script>
+
+<style>
+/* RESET */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -26,16 +31,8 @@
 html, body {
   width: 100%;
   height: 100%;
-  margin: 0;
-  padding: 0;
 }
 
-#app {
-  width: 100%;
-  min-height: 100vh;
-}
-
-/* Body style */
 body {
   font-family: 'Inter','Segoe UI',system-ui,sans-serif;
   background: #F8FAFC;
@@ -43,14 +40,18 @@ body {
   line-height: 1.6;
 }
 
-<style>
-/* Navbar */
+#app {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* NAVBAR */
 .navbar {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding:  24px;
+  padding: 0 24px;
   height: 64px;
   background: white;
   border-bottom: 1px solid #E2E8F0;
